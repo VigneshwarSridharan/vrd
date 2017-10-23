@@ -22,7 +22,9 @@
     </div>
     <div class="row">
     @foreach($addresses as $add)
-        <p class="col-sm-3">{{ $add->getAddress() }}</p>
+        <div class="col-sm-3">
+            <p>{{ $add->getAddress() }}</p>
+        </div>
     @endforeach
     </div>
 @endsection
