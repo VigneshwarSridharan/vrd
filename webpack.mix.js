@@ -121,6 +121,14 @@ mix.styles([
 mix.js('resources/assets/admin/js/users/create.js', 'public/assets/admin/js/users/')
     .sass('resources/assets/admin/sass/users/create.scss', 'public/assets/admin/css/users/');
 
+// Address
+mix.scripts([
+    'resources/assets/plugins/isotope/isotope.pkgd.js'
+], 'public/assets/admin/js/address/address-plugins.js');
+
+mix.js('resources/assets/admin/js/address/address.js','public/assets/admin/js/address/')
+    .sass('resources/assets/admin/sass/address/address.scss','public/assets/admin/css/address/');
+
 mix.scripts([
     'node_modules/gentelella/vendors/Flot/jquery.flot.js',
     'node_modules/gentelella/vendors/Flot/jquery.flot.time.js',

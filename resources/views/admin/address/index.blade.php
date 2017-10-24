@@ -20,11 +20,27 @@
             </div>
         </div>
     </div>
-    <div class="row">
-    @foreach($addresses as $add)
-        <div class="col-sm-3">
-            <p>{{ $add->getAddress() }}</p>
-        </div>
-    @endforeach
+    <div class="row manasory-wrapper">
+        @foreach($addresses as $address)
+            <div class="col-sm-2">
+                <div class="address-items">
+                    <h4 class="name">{{ $address->name }}</h4>
+                    <p class="address-full">{{ $address->getAddress() }}</p>
+                    <p>{{ $address->contact_no }}</p>
+                </div>
+                
+            </div>
+        @endforeach
     </div>
+@endsection
+
+@section('styles')
+    @parent
+    {{ Html::style(mix('assets/admin/css/address/address.css')) }}
+@endsection
+
+@section('scripts')
+    @parent
+    {{ Html::script(mix('assets/admin/js/address/address-plugins.js')) }}
+    {{ Html::script(mix('assets/admin/js/address/address.js')) }}
 @endsection
